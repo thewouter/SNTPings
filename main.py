@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 import ciede2000
 import json
 
-remoteStart = [100, 100]
+remoteStart = [0, 0]
 
 xstart = 508
 ystart = 500
@@ -18,8 +18,8 @@ refim = cv2.imread("reference.png")
 
 ypixels, xpixels, useless = refim.shape
 
-os.system("import -window root -crop {}x{}+{}+{} temp.png".format(str(xend-xstart), str(yend-ystart), str(xstart),
-                                                                  str(ystart)))
+#os.system("import -window root -crop {}x{}+{}+{} temp.png".format(str(xend-xstart), str(yend-ystart), str(xstart),
+#                                                                  str(ystart)))
 im = cv2.imread("temp.png")
 nx = np.linspace(0, xend-xstart-1, xpixels)
 ny = np.linspace(0, yend-ystart-1, ypixels)
