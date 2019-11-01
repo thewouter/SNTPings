@@ -25,11 +25,12 @@ while running:
             rgb = pixels[key]
             coord.extend(rgb)
             updates.append(coord)
-
+    random.shuffle(updates)
     index = random.randint(0, len(updates)-1)
 
     startTime = time.time()
     while time.time() - startTime < 30:
+#        time.sleep(0.001)
         data = updates[index]
         x = int(data[0]) + int(start[0])
         y = int(data[1]) + int(start[1])

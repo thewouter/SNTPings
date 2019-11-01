@@ -4,8 +4,9 @@ import numpy as np
 from matplotlib import pyplot as plt
 import ciede2000
 import json
+import random
 
-remoteStart = [0, 0]
+remoteStart = [1500, 700]
 
 xstart = 508
 ystart = 500
